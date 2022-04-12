@@ -27,23 +27,14 @@ require_once "include/connect.php";
                 <a class="navbar-brand title_style" href="index.php">Seat Booking</a>
             </div>
 
-            <?php if (isset($_SESSION['user_id'])) {
+            <?php if (isset($_SESSION['admin'])) {
 
-                $user_idd = $_SESSION['user_id'];
-
-                $select = "SELECT name FROM user WHERE id= '" . $user_idd . "' ";
-                $select_query = $connect->query($select);
-
-                while ($row = $select_query->fetch_assoc()) {
-
-                    $name = $row['name'];
-                }
 
             ?>
                 <div class="nav_items">
 
                     <?php echo ' <form action="logout.php" method="post">
-                                <button class="btn text-light" name="logout">logout</button>
+                                <button class="btn text-light" name="admin_logout">logout</button>
     
                                 </form>'; ?>
                 </div>
@@ -51,7 +42,7 @@ require_once "include/connect.php";
             ?>
 
                 <div class="nav_items">
-                    <a class="nav-link " aria-current="page" href="login.php">Login</a>
+                    <a class="nav-link " aria-current="page" href="admin-login.php">Login</a>
                 </div>
 
 

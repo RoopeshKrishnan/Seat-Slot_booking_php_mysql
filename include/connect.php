@@ -3,8 +3,8 @@
 $host="localhost";
 $username= "root";
 $password="";
-$databse="seat_booking";
+$database="seat_booking";
 
-$connect= new mysqli($host,$username,$password,$databse);
+$connect= new mysqli($host,$username,$password,$database);
 
 ?>

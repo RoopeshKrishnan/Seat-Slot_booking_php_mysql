@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once "include/connect.php";
 if(isset($_POST['admin_login'])){
 

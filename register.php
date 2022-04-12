@@ -1,5 +1,10 @@
 <?php
-require_once("include/connect.php"); ?>
+session_start();
+require_once("include/connect.php"); 
+
+if(!isset($_SESSION['user_id'])){
+
+?>
 
 
 <!DOCTYPE html>
@@ -19,11 +24,24 @@ require_once("include/connect.php"); ?>
             <div class="nav_title">
                 <a href="#">Seat Booking</a>
             </div>
+
+           <?php if(isset($_SESSION['user_id']))
+             {
+           ?>
+
             <div class="nav_items">
-                <a  aria-current="page" href="#">Login</a>
-
-
+                <a  aria-current="page" href="logout.php">Logout</a>
             </div>
+
+
+            <?php }else{ ?>
+                <div class="nav_items">
+                <a  aria-current="page" href="login.php">Login</a>
+            </div>
+
+            <?php  } ?>
+
+
         </nav>
     </div>
 
@@ -73,5 +91,9 @@ require_once("include/connect.php"); ?>
 
 
 <?php
+}else{
+
+    header("location:user_booking.php");
+}
 require_once "include/footer.php";
 ?>

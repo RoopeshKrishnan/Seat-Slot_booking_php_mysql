@@ -122,6 +122,20 @@ nav{
     color: black;
 }
 
+
+.card-button3{
+
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    border-radius: 9px;
+    background-color: white;
+    color: black;
+}
+
 .card-title h5{
     
     margin-bottom: 8px;
@@ -182,6 +196,7 @@ nav{
 
 .dash_wrap{
     display: flex;
+    justify-content: center;
 }
 
 .table_wrap{
@@ -209,3 +224,11 @@ nav{
     margin: 0;
     padding: 0;
 }
+
+.dash_back{
+
+   font-size: 1.8rem;
+}
+
+.dash_bcak_wrap{
+padding-left: 7rem;}

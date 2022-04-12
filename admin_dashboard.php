@@ -1,5 +1,5 @@
 <?php
-require_once "include/header.php";
+require_once "include/dash_header.php";
 require_once "include/connect.php";
 
 ?>
@@ -29,7 +29,7 @@ require_once "include/connect.php";
   <div class="card-body">
     <h5 class="card-title">Book Seat</h5>
     <div class="approval_button">
-    <a href="#" class="btn btn-danger">Book</a>
+    <a href="admin-seat-book.php" class="btn btn-danger">Book</a>
     </div>
   </div>
 </div>
@@ -44,7 +44,7 @@ require_once "include/connect.php";
   <div class="card-body">
     <h5 class="card-title">Manage Users</h5>
     <div class="approval_button">
-    <a href="#" class="btn btn-danger">ok</a>
+    <a href="admin_user_manage.php" class="btn btn-danger">ok</a>
     </div>
   </div>
 </div>
