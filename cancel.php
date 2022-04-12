@@ -8,7 +8,7 @@ $seat_id=$_GET['cancel'];
 $update = "UPDATE seat SET status='Book' WHERE id='$seat_id'";
 $update_query= $connect->query($update);
 
-header("location:cancel.php");
+header("location:admin-approval.php");
 
 
 }else{

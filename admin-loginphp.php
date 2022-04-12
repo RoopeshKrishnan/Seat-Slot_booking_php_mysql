@@ -12,10 +12,11 @@ $select = "SELECT * FROM admin WHERE admin_email='$admin_email' AND admin_passwo
 $select_query = $connect->query($select);
 
 if($row = $select_query->fetch_assoc()){
+    $aid=$row['id'];
 
     $_SESSION['admin']= $row['admin_name'];
 
-    header("location:admin_dashboard.php");
+    header("location:admin_dashboard.php?adminid=$aid");
 
 }else{
 

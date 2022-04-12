@@ -3,6 +3,11 @@ require_once "include/dash_header.php";
 require_once "include/connect.php";
 
 
+
+if(isset($_SESSION['admin'])){
+
+
+
 $select = "SELECT * FROM seat";
 $select_query = $connect->query($select); ?>
 
@@ -142,6 +147,11 @@ $select_query = $connect->query($select); ?>
     }
 
     ?>
+
+    <?php  }else{
+
+      header("location:admin_dashboard.php");
+    } ?>
 
 
 <?php require_once "include/footer.php" ?>

@@ -3,6 +3,9 @@ require_once "include/dash_header.php";
 require_once "include/connect.php";
 
 
+
+if(isset($_SESSION['admin'])){
+
 $select = "SELECT * FROM user ";
 
 $select_query = $connect->query($select);
@@ -97,7 +100,12 @@ if ($count > 0) {
       <h1>Record is empty</h1>
   </div>';
 } ?>
+<?php }else{
 
+header("location:admin_dashboard.php");
+
+
+}  ?>
 
     <?php
     require_once "include/footer.php";

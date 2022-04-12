@@ -2,6 +2,9 @@
 require_once "include/dash_header.php";
 require_once "include/connect.php";
 
+if(isset($_SESSION['admin']) || isset($_GET['adminid'])){
+
+
 ?>
 <div class="dash_title">
 <h1 >ADMIN DASHBOARD</h1>
@@ -49,18 +52,15 @@ require_once "include/connect.php";
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
 </div>
+
+<?php  }else{
+
+header("location:admin-index.php");
+
+} ?>
+
+
 <?php 
 
 require_once "include/footer.php";

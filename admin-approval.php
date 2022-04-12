@@ -3,6 +3,8 @@ require_once "include/dash_header.php";
 require_once "include/connect.php";
 
 
+if(isset($_SESSION['admin'])){
+
 $select = "SELECT * FROM seat WHERE status = 'Pending'";
 
 $select_query = $connect->query($select);
@@ -83,14 +85,28 @@ if ($count > 0) {
     </div>
 <?php
 } else {
+?><div class="dash_bcak_wrap">
+<a href="admin_dashboard.php"><i class='dash_back bx bx-arrow-back'></i></a>
 
+
+</div>
+
+<?php
     echo '
   <div class="record_empty">
       <h1>Record is empty</h1>
   </div>';
-} ?>
+}
+
+}else{
 
 
+    header("location:admin_dashboard.php");
+
+}
+
+
+?>
 <?php
 require_once "include/footer.php";
 ?>
