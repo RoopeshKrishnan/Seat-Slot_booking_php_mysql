@@ -50,7 +50,7 @@ if ($count > 0) {
                                     <td>Age</td>
                                     <td>Number</td>
                                     <td>Email</td>
-                                    <td colspan="3">Operaion</td>
+                                    <!-- <td colspan="3">Operaion</td> -->
 
                                 </tr>
                                 <?php
@@ -76,7 +76,7 @@ if ($count > 0) {
 
 
 
-                                        <td class="tdd"><a href="admin_user_delete.php?delete=<?php echo $id  ?>" class="btn btn-danger btn-sm">Remove</a></td>
+                                        <!-- <td class="tdd"><a href="admin_user_delete.php?delete=<?php echo $id  ?>" class="btn btn-danger btn-sm">Remove</a></td> -->
 
                                     </tr>
 

@@ -74,49 +74,59 @@ if (isset($_SESSION['admin'])) {
                                     $seat_booked_user_id = $store['usp_user_id'];
                                     $seat_booked_seat_id = $store['usp_seat_id'];
 
+                                    
+                                        $select_seat_no="SELECT number FROM seat WHERE id='$seat_booked_seat_id'";
+                                        $select_seat_no_query=$connect->query($select_seat_no);
 
-                                    $seat_booked_user_deatils = "SELECT * FROM user WHERE  id='$seat_booked_user_id'";
-                                    $seat_booked_user_deatils_query = $connect->query($seat_booked_user_deatils);
-
-
-                                    while ($store_user = $seat_booked_user_deatils_query->fetch_assoc()) {
-
-                                        $slno = $slno + 1;
-                                        $user_name = $store_user['name'];
-                                        $user_mobile = $store_user['mob_number'];
-                                        $user_email = $store_user['email'];
+                                        while($seat_num_result=$select_seat_no_query->fetch_assoc()){
+                                            $seat_number=$seat_num_result['number'];
+                                        }
 
 
 
-                                ?>
 
-                                        <tr>
-                                            <td><?php echo $slno ?></td>
-                                            <td><?php echo $seat_booked_seat_id ?></td>
-                                            <td><?php echo $user_name ?></td>
-                                            <td><?php echo $user_mobile ?></td>
-                                            <td><?php echo $user_email ?></td>
-
-                                            <td class="tdd"><a href="approve.php?approve=<?php echo $seat_booked_seat_id ?>" class="btn btn-danger btn-sm">Approve</a></td>
-                                            <td><a href="cancel.php?cancel=<?php echo $seat_booked_seat_id ?>" class="btn btn-primary btn-sm">Cancel</a></td>
+                                            $seat_booked_user_deatils = "SELECT * FROM user WHERE  id='$seat_booked_user_id'";
+                                            $seat_booked_user_deatils_query = $connect->query($seat_booked_user_deatils);
 
 
-                                        </tr>
+                                            while ($store_user = $seat_booked_user_deatils_query->fetch_assoc()) {
 
-                                <?php
-                                    }
-                                } ?>
+                                                $slno = $slno + 1;
+                                                $user_name = $store_user['name'];
+                                                $user_mobile = $store_user['mob_number'];
+                                                $user_email = $store_user['email'];
 
-                            </table>
 
+
+                                                ?>
+
+                                                <tr>
+                                                    <td><?php echo $slno ?></td>
+                                                    <td><?php echo $seat_number ?></td>
+                                                    <td><?php echo $user_name ?></td>
+                                                    <td><?php echo $user_mobile ?></td>
+                                                    <td><?php echo $user_email ?></td>
+
+                                                    <td class="tdd"><a href="approve.php?approve=<?php echo $seat_booked_seat_id ?>" class="btn btn-danger btn-sm">Approve</a></td>
+                                                    <td><a href="cancel.php?cancel=<?php echo $seat_booked_seat_id ?>" class="btn btn-primary btn-sm">Cancel</a></td>
+
+
+                                                </tr>
+
+                                        <?php
+                                            }
+                                        } ?>
+
+                                </table>
+
+                            </div>
                         </div>
+
+
                     </div>
 
-
                 </div>
-
             </div>
-        </div>
     <?php
     } else {
     ?><div class="dash_bcak_wrap">

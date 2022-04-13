@@ -76,9 +76,9 @@ $select_query = $connect->query($select); ?>
       <h2 class="card-title">' . $status . '</h5>
         <h5 class="card-title">Seat No :' . $number . '</h5>
         <div class="button-wrap">
-        <a class="card-button1" href="admin_seat_book_button.php?seat_id='.$id.'" class="card-link">Book</a>
-        <a class="card-button1" href="admin_seat_book_cancel.php?seat_id='.$id.'" class="card-link">Cancel</a>
-        <a class="card-button1" href="admin_seat_book_reserve.php?seat_id='.$id.'" class="card-link">Reserve</a>
+        <a style="  pointer-events: none;" class="card-button1" href="admin_seat_book_button.php?seat_id='.$id.'" class="card-link">Book</a>
+        <a class="card-button1" href="admin_seat_book_cancel.php?seat_id='.$id.'&status='.$status.'" class="card-link">Cancel</a>
+        <a style="  pointer-events: none;" class="card-button1" href="admin_seat_book_reserve.php?seat_id='.$id.'" class="card-link">Reserve</a>
 
         </div>
 
@@ -101,9 +101,9 @@ $select_query = $connect->query($select); ?>
       <h2 class="card-title">' . $status . '</h5>
         <h5 class="card-title">Seat No :' . $number . '</h5>
         <div class="button-wrap">
-        <a class="card-button1" href="admin_seat_book_button.php?seat_id='.$id.'" class="card-link">Book</a>
+        <a style="  pointer-events: none;" class="card-button1" href="admin_seat_book_button.php?seat_id='.$id.'" class="card-link">Book</a>
         <a class="card-button1" href="admin_seat_book_cancel.php?seat_id='.$id.'" class="card-link">Cancel</a>
-        <a style="  pointer-events: none;" class="card-button1" href="admin_seat_book_reserve.php?seat_id='.$id.'" class="card-link">Reserve</a>
+        <a style="  pointer-events: none;"  style="  pointer-events: none;" class="card-button1" href="admin_seat_book_reserve.php?seat_id='.$id.'" class="card-link">Reserve</a>
 
         </div>
 
@@ -126,7 +126,7 @@ $select_query = $connect->query($select); ?>
       <h2 class="card-title">' . $status . '</h5>
         <h5 class="card-title">Seat No :' . $number . '</h5>
         <div class="button-wrap">
-        <a class="card-button1" href="admin_seat_book_button.php?seat_id='.$id.'" class="card-link">Book</a>
+        <a style="  pointer-events: none;" class="card-button1" href="admin_seat_book_button.php?seat_id='.$id.'" class="card-link">Book</a>
         <a class="card-button1" href="admin_seat_book_cancel.php?seat_id='.$id.'" class="card-link">Cancel</a>
         <a class="card-button1" href="admin_seat_book_reserve.php?seat_id='.$id.'" class="card-link">Reserve</a>
 
