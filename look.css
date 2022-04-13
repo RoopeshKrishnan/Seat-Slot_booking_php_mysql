@@ -232,3 +232,12 @@ nav{
 
 .dash_bcak_wrap{
 padding-left: 7rem;}
+
+.no_booking{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
