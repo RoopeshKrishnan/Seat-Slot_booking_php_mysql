@@ -51,7 +51,7 @@ $select_query = $connect->query($select); ?>
         <h5 class="card-title">Seat No :' . $number . '</h5>
         <div class="button-wrap">
         <a class="card-button1" href="user_seat_book.php?seat_id='.$id.'" class="card-link">Book</a>
-        <a class="card-button1" href="user_seat_booking_cancel.php?seat_id='.$id.'" class="card-link">Cancel</a>
+        <a class="card-button1" href="user_seat_booking_cancel.php?seat_id='.$id.'&status='.$status.'" class="card-link">Cancel</a>
         </div>
 
       </div>
@@ -74,7 +74,7 @@ $select_query = $connect->query($select); ?>
         <h5 class="card-title">Seat No :' . $number . '</h5>
         <div class="button-wrap">
         <a class="card-button1" href="user_seat_book.php?seat_id='.$id.'" class="card-link">Book</a>
-        <a class="card-button1" href="user_seat_booking_cancel.php?seat_id='.$id.'" class="card-link">Cancel</a>
+        <a class="card-button1" href="user_seat_booking_cancel.php?seat_id='.$id.'&status='.$status.'" class="card-link">Cancel</a>
         </div>
 
       </div>
@@ -97,7 +97,7 @@ $select_query = $connect->query($select); ?>
         <h5 class="card-title">Seat No :' . $number . '</h5>
         <div class="button-wrap">
         <a  style="  pointer-events: none;" class="card-button1" href="user_seat_book.php?seat_id='.$id.'" class="card-link">Book</a>
-        <a class="card-button1" href="user_seat_booking_cancel.php?seat_id='.$id.'" class="card-link">Cancel</a>
+        <a class="card-button1" href="user_seat_booking_cancel.php?seat_id='.$id.'&status='.$status.'" class="card-link">Cancel</a>
         </div>
 
       </div>

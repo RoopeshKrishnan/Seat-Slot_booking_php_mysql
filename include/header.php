@@ -42,9 +42,10 @@ require_once "include/connect.php";
             ?>
                 <div class="nav_items">
 
-                    <?php echo ' <form action="logout.php" method="post">
+                    <?php echo ' <form style="display:flex;" action="logout.php" method="post">
                                 <button class="btn text-light" name="logout">logout</button>
-    
+                                <a class="nav-link " aria-current="page" href="my_bookings.php">My bookings</a>
+
                                 </form>'; ?>
                 </div>
             <?php } else {
